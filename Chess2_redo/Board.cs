@@ -16,7 +16,6 @@ namespace Chess2_redo
         public Piece[,] game_board = new Piece[8, 8];
         public Piece[] boardJson = new Piece[64];
         public List<Piece> boardList { get; set; }
-        // public List<testClass> list  { get; set; }
         public string boardJsonString;
         //inits the boardJson
         public Board()
@@ -38,8 +37,6 @@ namespace Chess2_redo
             {
                 ary.Add(i);
             }
-
-
             return ary;
         }
 
@@ -60,14 +57,14 @@ namespace Chess2_redo
         {
             boardJson = this.oneDBoard(this.game_board);
             boardJsonString = JsonSerializer.Serialize(this.boardJson);
-            //boardList = BoardtoList(this.game_board);
+            boardList = BoardtoList(this.game_board);
         }
 
 
         //test writing the result to a txt file
         public void writeToTxt()
         {
-            string filePath = @"C:\Users\Pengb\Documents\output.txt"; ;
+            string filePath = @"C:\Users\Pengbo Xue\Documents\output.txt"; ;
             using (StreamWriter outputFile = new StreamWriter(filePath))
             {
                 outputFile.WriteLine(boardJsonString);

@@ -28,7 +28,7 @@ namespace Chess2_redo
             //hard coded declearing pieces
             br1 = new Rook("br1", 0, 0);
             br2 = new Rook("br2", 0, 0);
-            board.updateOneDAryAndList();
+            //board.updateOneDAryAndList();
 
             //hard coded adding piece to player list
             blackSide.onBoard.Add(this.br1);
@@ -37,6 +37,7 @@ namespace Chess2_redo
             this.board.game_board[0, 0] = this.br1;
             this.board.game_board[0, 3] = this.br2;
             //int[] ary = board.game_board[0];
+            board.updateOneDAryAndList();
         }
     }
 
@@ -49,7 +50,7 @@ namespace Chess2_redo
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-Q83UTTM9\SQLEXPRESS;Initial Catalog=BoardDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-BC5EN6M\SQLEXPRESS;Initial Catalog=Chess_Db1;Integrated Security=True");
         }
         
     }

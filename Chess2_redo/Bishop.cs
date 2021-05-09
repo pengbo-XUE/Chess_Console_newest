@@ -8,7 +8,7 @@ namespace Chess2_redo
     {
         public Bishop(string newName, int one, int two)
         {
-            this.name = newName;
+            this.Id = newName;
             this.x = one;
             this.y = two;
         }

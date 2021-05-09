@@ -11,7 +11,7 @@ namespace Chess2_redo
         
         public Rook(string newName, int one, int two)
         {
-            this.name = newName;
+            this.Id = newName;
             this.x = one;
             this.y = two;
         }
@@ -27,17 +27,17 @@ namespace Chess2_redo
             if (newx == this.x)
             {
                 int v = Math.Abs(newy - this.y);
-                Console.WriteLine("abs value: " + v);
+               // Console.WriteLine("abs value: " + v);
                 if (newy > this.y)
                 {
                     for (int i = 1; i <= v; i++)
                     {
-                        Console.WriteLine("in the check if loop " + newy);
-                        Console.WriteLine("in the check if loop seacond " + temp_b[0,3]);
-                        Console.WriteLine("in the check if loop third " + v);
+                        //Console.WriteLine("in the check if loop " + newy);
+                       // Console.WriteLine("in the check if loop seacond " + temp_b[0,3]);
+                        //Console.WriteLine("in the check if loop third " + v);
                         if (temp_b[this.x, this.y + i] != null)
                         {   
-                            Console.WriteLine("two " + i);
+                            //Console.WriteLine("two " + i);
                             return false;
                         }
                        
@@ -60,11 +60,14 @@ namespace Chess2_redo
                 }
 
             }
+
+
+
             else if (newy == this.y)
             {
                 //getting the abs value of difference between the new value and the old
                 int v = Math.Abs(newx - this.x);
-                Console.WriteLine("abs value: "+v);
+                //Console.WriteLine("abs value: "+v);
                 //when new pos is on the right of the original position
                 if (newx > this.x)
                 {

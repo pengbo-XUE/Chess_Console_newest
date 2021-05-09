@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pengb\\OneDrive\\Desktop\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {}
+    "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pengb\\OneDrive\\Desktop\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {
+    "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+        "projectUniqueName": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
         "projectName": "Chess2_redo",
-        "projectPath": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+        "projectPath": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
         "packagesPath": "C:\\Users\\Pengb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Chess2_redo\\Chess2_redo\\obj\\",
+        "outputPath": "E:\\Chess2_redo\\Chess2_redo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pengb\\AppData\\Roaming\\NuGet\\NuGet.Config",
