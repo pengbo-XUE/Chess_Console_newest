@@ -52,9 +52,9 @@ namespace Chess2_redo
                     pipe.sendData("Hello");
                 }
                 //await pipe.reciveData();
-                //game.board.updateOneDAryAndList();
+                game.board.updateOneDAryAndList();
 
-                Console.WriteLine("the cunrrent piece is: " + cunrrentPiece);
+                //Console.WriteLine("the cunrrent piece is: " + cunrrentPiece);
             }
 
         }
