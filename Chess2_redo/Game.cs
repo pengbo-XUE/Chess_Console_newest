@@ -26,10 +26,9 @@ namespace Chess2_redo
         public Player whiteSide;
         public Player blackSide;
 
-        public Rook br1;
-        public Rook br2;
-        public Rook wr1;
-        
+        public Rook br1, br2, wr1, wr2;
+        public Pawn bp1, bp2, bp3, bp4, bp5, bp6, bp7, bp8;
+        public Pawn wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8;
         public Game()
         {
             //players declared
@@ -39,20 +38,87 @@ namespace Chess2_redo
             board = new Board();
 
             //pieces declared
-            br1 = new Rook("br1", 0, 0,"b");
-            br2 = new Rook("br2", 1, 0,"b");
-            wr1 = new Rook("wr1", 0, 2, "w");
 
-            //hard coded adding piece to player list
+            //ROOKS
+            br1 = new Rook("br1", 0, 0,"b");
+            br2 = new Rook("br2", 7, 0,"b");
+            wr1 = new Rook("wr1", 0, 7, "w");
+            wr2 = new Rook("wr1", 7, 7, "w");
+
+            //BLACK PAWNS
+            bp1 = new Pawn("bp1", 0, 1, "b");
+            bp2 = new Pawn("bp2", 1, 1, "b");
+            bp3 = new Pawn("bp3", 2, 1, "b");
+            bp4 = new Pawn("bp4", 3, 1, "b");
+            bp5 = new Pawn("bp5", 4, 1, "b");
+            bp6 = new Pawn("bp6", 5, 1, "b");
+            bp7 = new Pawn("bp7", 6, 1, "b");
+            bp8 = new Pawn("bp8", 7, 1, "b");
+
+            //WHITE PAWNS
+            wp1 = new Pawn("wp1", 0, 6, "w");
+            wp2 = new Pawn("wp2", 1, 6, "w");
+            wp3 = new Pawn("wp3", 2, 6, "w");
+            wp4 = new Pawn("wp4", 3, 6, "w");
+            wp5 = new Pawn("wp5", 4, 6, "w");
+            wp6 = new Pawn("wp6", 5, 6, "w");
+            wp7 = new Pawn("wp7", 6, 6, "w");
+            wp8 = new Pawn("wp8", 7, 6, "w");
+
+            //adding piece to player list
+            //ROOKS
             blackSide.onBoard.Add(this.br1);
             blackSide.onBoard.Add(this.br2);
             whiteSide.onBoard.Add(this.wr1);
+            whiteSide.onBoard.Add(this.wr2);
 
+            //BLACK PAWNS
+            blackSide.onBoard.Add(this.bp1);
+            blackSide.onBoard.Add(this.bp2);
+            blackSide.onBoard.Add(this.bp3);
+            blackSide.onBoard.Add(this.bp4);
+            blackSide.onBoard.Add(this.bp5);
+            blackSide.onBoard.Add(this.bp6);
+            blackSide.onBoard.Add(this.bp7);
+            blackSide.onBoard.Add(this.bp8);
+
+            //WHITE PAWNS
+            whiteSide.onBoard.Add(this.wp1);
+            whiteSide.onBoard.Add(this.wp2);
+            whiteSide.onBoard.Add(this.wp3);
+            whiteSide.onBoard.Add(this.wp4);
+            whiteSide.onBoard.Add(this.wp5);
+            whiteSide.onBoard.Add(this.wp6);
+            whiteSide.onBoard.Add(this.wp7);
+            whiteSide.onBoard.Add(this.wp8);
+           
 
             //pos assignment
+            //ROOKS
             this.board.game_board[0, 0] = this.br1;
-            this.board.game_board[1, 0] = this.br2;
-            this.board.game_board[0, 2] = this.wr1;
+            this.board.game_board[7, 0] = this.br2;
+            this.board.game_board[0, 7] = this.wr1;
+            this.board.game_board[7, 7] = this.wr2;
+
+            //BLACK PAWN
+            this.board.game_board[0, 1] = this.bp1;
+            this.board.game_board[1, 1] = this.bp2;
+            this.board.game_board[2, 1] = this.bp3;
+            this.board.game_board[3, 1] = this.bp4;
+            this.board.game_board[4, 1] = this.bp5;
+            this.board.game_board[5, 1] = this.bp6;
+            this.board.game_board[6, 1] = this.bp7;
+            this.board.game_board[7, 1] = this.bp8;
+            //WHITE PAWN
+            this.board.game_board[0, 6] = this.wp1;
+            this.board.game_board[1, 6] = this.wp2;
+            this.board.game_board[2, 6] = this.wp3;
+            this.board.game_board[3, 6] = this.wp4;
+            this.board.game_board[4, 6] = this.wp5;
+            this.board.game_board[5, 6] = this.wp6;
+            this.board.game_board[6, 6] = this.wp7;
+            this.board.game_board[7, 6] = this.wp8;
+
             board.updateOneDAryAndList();
         }
         //these two methods deletes the given piece from a list/lists

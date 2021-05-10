@@ -510,3 +510,4 @@ C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.dll
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.pdb
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.genruntimeconfig.cache
+C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.csprojAssemblyReference.cache

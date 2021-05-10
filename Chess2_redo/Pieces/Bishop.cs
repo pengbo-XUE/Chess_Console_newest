@@ -16,7 +16,8 @@ namespace Chess2_redo
         public override bool check_move(int newx, int newy)
         {
             Piece[,] temp_b = Program.game.board.game_board;
-
+            int abs_v_y = Math.Abs(newy - this.y);
+            int abs_v_x = Math.Abs(newx - this.x);
 
             if (newx > x && newy > x) { }
             else if (newx > x && newy < y) { }

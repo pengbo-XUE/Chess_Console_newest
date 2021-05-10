@@ -30,17 +30,17 @@ namespace Chess2_redo
         {   
             
             temp_b = Program.game.board.game_board;
-            int v = Math.Abs(newy - this.y);
+            int abs_v = Math.Abs(newy - this.y);
 
             if (newx == x && newy > y && direction == "up" && newy > this.y)
             {
-                if (v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x,y+1]== null)
+                if (abs_v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x,y+1]== null)
                 {
                     
                     firstmove = false;
                     return true;
                 }
-                else if (v == 1 && temp_b[newx, newy] == null) 
+                else if (abs_v == 1 && temp_b[newx, newy] == null) 
                 {
                     return true;
                 }
@@ -48,12 +48,12 @@ namespace Chess2_redo
             }
             else if (newx == x && newy < y && direction == "down" && newy < this.y)
             {
-                if (v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x, y - 1] == null)
+                if (abs_v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x, y - 1] == null)
                 {
                     firstmove = false;
                     return true;
                 }
-                else if (v == 1 && temp_b[newx, newy] == null)
+                else if (abs_v == 1 && temp_b[newx, newy] == null)
                 {
                     return true;
                 }

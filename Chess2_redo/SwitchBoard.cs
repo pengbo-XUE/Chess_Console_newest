@@ -25,6 +25,12 @@ namespace Chess2_redo
                     Console.WriteLine("Board reset");
                     Program.pipe.sendData("game_reset");
                     break;
+
+                case "gameover":
+                    Program.gameOver = true;
+                    Program.pipe.sendData("game_over");
+                    break;
+
             }
         }
     }
