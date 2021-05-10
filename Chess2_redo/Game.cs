@@ -26,15 +26,13 @@ namespace Chess2_redo
             //players declared
             blackSide = new Player("black");
             whiteSide = new Player("white");
-           // players.Add(blackSide);
-            //players.Add(whiteSide);
+            //board declared
             board = new Board();
 
-            //hard coded declearing pieces
+            //pieces declared
             br1 = new Rook("br1", 0, 0,"b");
-            br2 = new Rook("br2", 0, 1,"b");
-            wr1 = new Rook("wr1", 2, 0, "w");
-            //board.updateOneDAryAndList();
+            br2 = new Rook("br2", 1, 0,"b");
+            wr1 = new Rook("wr1", 0, 2, "w");
 
             //hard coded adding piece to player list
             blackSide.onBoard.Add(this.br1);
@@ -42,11 +40,10 @@ namespace Chess2_redo
             whiteSide.onBoard.Add(this.wr1);
 
 
-            //hard code pos assignment DELETE LATER
+            //pos assignment
             this.board.game_board[0, 0] = this.br1;
-            this.board.game_board[0, 1] = this.br2;
-            this.board.game_board[2, 0] = this.wr1;
-            //int[] ary = board.game_board[0];
+            this.board.game_board[1, 0] = this.br2;
+            this.board.game_board[0, 2] = this.wr1;
             board.updateOneDAryAndList();
         }
 

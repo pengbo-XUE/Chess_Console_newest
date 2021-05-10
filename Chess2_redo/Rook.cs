@@ -21,15 +21,9 @@ namespace Chess2_redo
         {
             Piece[,] temp_b = MainClass.game.board.game_board;
 
-            /*foreach (var i in temp_b)
-            {
-                Console.WriteLine("in loop: "+ i);
-            }*/
-
             if (newx == this.x)
             {
                 int v = Math.Abs(newy - this.y);
-               // Console.WriteLine("abs value: " + v);
                 if (newy > this.y)
                 {
                     for (int i = 1; i <= v; i++)
@@ -41,11 +35,10 @@ namespace Chess2_redo
                             //delets the enemy piece and replaces it in the position
                             if (this.x == newx && this.y + i == newy &&
                                 temp_b[this.x, this.y + i].color != this.color) 
-                            {   
+                            {
                                 MainClass.game.deletePiece(temp_b[this.x, this.y + i].color, temp_b[this.x, this.y + i].Id);
                                 return true;
                             }
-                            Console.WriteLine("two " + i);
                             return false;
                         }
                        
@@ -55,7 +48,7 @@ namespace Chess2_redo
                 //this is when the new pos is on the left of the original position
                 else if (newy < this.y)
                 {
-                    for (int i = 1; i < v; i++)
+                    for (int i = 1; i <= v; i++)
                     {
                         if (temp_b[this.x, this.y - i] != null)
                         {
@@ -67,10 +60,8 @@ namespace Chess2_redo
                                 MainClass.game.deletePiece(temp_b[this.x, this.y - i].color, temp_b[this.x, this.y - i].Id);
                                 return true;
                             }
-                            //Console.WriteLine(i);
                             return false;
                         }
-                       
                     }
                     return true;
                 }
@@ -83,12 +74,13 @@ namespace Chess2_redo
             {
                 //getting the abs value of difference between the new value and the old
                 int v = Math.Abs(newx - this.x);
-                //Console.WriteLine("abs value: "+v);
+               
                 //when new pos is on the right of the original position
                 if (newx > this.x)
                 {
-                    for (int i = 1; i < v; i++)
+                    for (int i = 1; i <= v; i++)
                     {
+                       
                         if (temp_b[this.x + i, this.y] != null)
                         {
                             //this if loop determines if the last place the piece lands on has a enemy on it
@@ -107,7 +99,7 @@ namespace Chess2_redo
                 //this is when the new pos is on the left of the original position
                 else if (newx < this.x)
                 {
-                    for (int i = 1; i < v; i++)
+                    for (int i = 1; i <= v; i++)
                     {
                         if (temp_b[this.x - i, this.y] != null)
                         {

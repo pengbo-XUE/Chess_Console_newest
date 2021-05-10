@@ -31,7 +31,9 @@ namespace Chess2_redo
 
                 Console.WriteLine("valid");
                 MainClass.pipe.sendData("p_move_valid");
+                MainClass.game.board.updateOneDAryAndList();
                 return true;
+                
 
             }
             Console.WriteLine("invalid");

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ut80JYFC4v6ElO52VrT4QZdpW0wfVp/5t4pYbzxq/OQp6K9UFNgszyY0AJRZ6SrS1e/kvL5AApdXRVrCzmxo0g==",
+  "dgSpecHash": "fl8NqwkwfhyzRynB7mCCdvEkRJtgNdKlWAC/ArygI/NYWAg/KIR4FuXy6FHhkYnoNLBmuc1JIAx/2tyo3RB16w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Cunnrent Chess\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+  "projectFilePath": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pengb\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Pengb\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
