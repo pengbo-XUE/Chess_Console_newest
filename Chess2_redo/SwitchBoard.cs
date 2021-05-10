@@ -7,13 +7,12 @@ namespace Chess2_redo
     public static class SwitchBoard
     {
         public static void handelRequest(string request)
-        {
-
+        { 
             switch (request)
             {
                 case "move":
-                    Console.WriteLine("From switch board"+MainClass.cunrrentPiece);
-                    MainClass.cunrrentPiece.move(MainClass.inputx, MainClass.inputy);
+                    Console.WriteLine("From switch board"+MainClass.game.cunrrentPiece);
+                    MainClass.game.cunrrentPiece.move(MainClass.game.inputx, MainClass.game.inputy);
                     if (CheckWin.check())
                     {
                         MainClass.gameOver = true;

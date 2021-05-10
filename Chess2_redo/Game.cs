@@ -13,10 +13,19 @@ namespace Chess2_redo
         public int GameId { get; set; }
         //public List<Player> players { get; set; }
 
+
+        //MICS stuff
         [ForeignKey("BoardIdId")]
         public Board board { get; set; }
+        public string userInput;
+        public Piece cunrrentPiece;
+        public int inputx;
+        public int inputy;
+
+        //players declared
         public Player whiteSide;
         public Player blackSide;
+
         public Rook br1;
         public Rook br2;
         public Rook wr1;
@@ -46,7 +55,7 @@ namespace Chess2_redo
             this.board.game_board[0, 2] = this.wr1;
             board.updateOneDAryAndList();
         }
-
+        //these two methods deletes the given piece from a list/lists
         public void deletePiece(string p)
         {
             var result = from Piece in board.boardList
@@ -55,8 +64,8 @@ namespace Chess2_redo
             var result2 = result.Single(r => r.Id == p);
             board.boardList.Remove(result2);
         }
-
-        public  void deletePiece(string player, string p)
+       
+        public void deletePiece(string player, string p)
         {
             if (player == "b")
             {
@@ -80,6 +89,39 @@ namespace Chess2_redo
                          select Piece;
             var result3 = result0.Single(r => r.Id == p);
             board.boardList.Remove(result3);
+        }
+
+        // this method takes a string which is the piece id in a string format
+        // then it selects the piece with the id from the boardList list in game class
+        public void setCurrentPiece(string p)
+        {
+            var result = from Piece in board.boardList
+                         where Piece != null
+                         select Piece;
+
+            var result2 = from Piece in result
+                          where Piece.Id == p
+                          select Piece;
+            List<Piece> tempList = new List<Piece>();
+
+            foreach (Piece i in result2)
+            {
+                tempList.Add(i);
+            }
+            cunrrentPiece = tempList[0];
+        }
+
+        //gets the position of a piece
+        public static string getPiecePosition(Piece p)
+        {
+            return $"{p.x} {p.y}";
+        }
+
+        //gets the cord from pipe and set it to the prop
+        public void setCord(int x, int y)
+        {
+            inputx = x;
+            inputy = y;
         }
     }
 

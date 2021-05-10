@@ -24,7 +24,6 @@ namespace Chess2_redo
 
         }
 
-
         public Piece[,] getBorad()
         {
             return this.game_board;
@@ -60,17 +59,15 @@ namespace Chess2_redo
             boardList = BoardtoList(this.game_board);
         }
 
-
         //test writing the result to a txt file
-        public void writeToTxt()
+     /*   public void writeToTxt()
         {
             string filePath = @"C:\Users\Pengbo Xue\Documents\output.txt"; ;
             using (StreamWriter outputFile = new StreamWriter(filePath))
             {
                 outputFile.WriteLine(boardJsonString);
             }
-        }
-
+        }*/
 
         // gets a board from DB
         public string getBoardFromDb(int id)
@@ -79,10 +76,5 @@ namespace Chess2_redo
             string temp = context.Boards.Where(c => c.BoardId == id).ToString();
             return temp;
         }
-
-
-
     }
-
-     
 }

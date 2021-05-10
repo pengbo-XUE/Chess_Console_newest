@@ -503,7 +503,6 @@ C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\bin\Debug
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.csprojAssemblyReference.cache
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.AssemblyInfoInputs.cache
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.AssemblyInfo.cs
 C:\Users\Pengb\OneDrive\Desktop\Cunnrent Chess\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.csproj.CoreCompileInputs.cache

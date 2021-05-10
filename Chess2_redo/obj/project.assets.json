@@ -6941,11 +6941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+      "projectUniqueName": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Cunnrent Chess\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
       "projectName": "Chess2_redo",
-      "projectPath": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+      "projectPath": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Cunnrent Chess\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
       "packagesPath": "C:\\Users\\Pengb\\.nuget\\packages\\",
-      "outputPath": "E:\\Chess2_redo\\Chess2_redo\\obj\\",
+      "outputPath": "C:\\Users\\Pengb\\OneDrive\\Desktop\\Cunnrent Chess\\Chess2_redo\\Chess2_redo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pengb\\AppData\\Roaming\\NuGet\\NuGet.Config",
