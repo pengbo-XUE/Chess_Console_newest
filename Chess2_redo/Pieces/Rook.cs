@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Chess2_redo.Game;
 
 namespace Chess2_redo
 {
@@ -19,7 +18,7 @@ namespace Chess2_redo
         }
         public override bool check_move(int newx, int newy)
         {
-            Piece[,] temp_b = MainClass.game.board.game_board;
+            Piece[,] temp_b = Program.game.board.game_board;
 
             if (newx == this.x)
             {
@@ -36,7 +35,7 @@ namespace Chess2_redo
                             if (this.x == newx && this.y + i == newy &&
                                 temp_b[this.x, this.y + i].color != this.color) 
                             {
-                                MainClass.game.deletePiece(temp_b[this.x, this.y + i].color, temp_b[this.x, this.y + i].Id);
+                                Program.game.deletePiece(temp_b[this.x, this.y + i].color, temp_b[this.x, this.y + i].Id);
                                 return true;
                             }
                             return false;
@@ -57,7 +56,7 @@ namespace Chess2_redo
                             if (this.x == newx && this.y - i == newy &&
                                 temp_b[this.x, this.y - i].color != this.color)
                             {
-                                MainClass.game.deletePiece(temp_b[this.x, this.y - i].color, temp_b[this.x, this.y - i].Id);
+                                Program.game.deletePiece(temp_b[this.x, this.y - i].color, temp_b[this.x, this.y - i].Id);
                                 return true;
                             }
                             return false;
@@ -88,7 +87,7 @@ namespace Chess2_redo
                             if (this.x + i ==  newx && this.y== newy &&
                                 temp_b[this.x + i, this.y].color != this.color)
                             {
-                                MainClass.game.deletePiece(temp_b[this.x + i, this.y].color, temp_b[this.x + i, this.y].Id);
+                                Program.game.deletePiece(temp_b[this.x + i, this.y].color, temp_b[this.x + i, this.y].Id);
                                 return true;
                             }
                             return false;
@@ -108,7 +107,7 @@ namespace Chess2_redo
                             if (this.x - i == newx && this.y == newy &&
                                 temp_b[this.x - i, this.y].color != this.color)
                             {
-                                MainClass.game.deletePiece(temp_b[this.x - i, this.y].color, temp_b[this.x - i, this.y].Id);
+                                Program.game.deletePiece(temp_b[this.x - i, this.y].color, temp_b[this.x - i, this.y].Id);
                                 return true;
                             }
                             return false;

@@ -15,7 +15,7 @@ namespace Chess2_redo
         }
         public override bool check_move(int newx, int newy)
         {
-            Piece[,] temp_b = MainClass.game.board.game_board;
+            Piece[,] temp_b = Program.game.board.game_board;
 
 
             if (newx > x && newy > x) { }

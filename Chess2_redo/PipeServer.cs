@@ -69,11 +69,11 @@ namespace Chess2_redo
 
                         if (temp != null)
                         {
-                            MainClass.game.userInput = temp3[0];
+                            Program.game.userInput = temp3[0];
                             Console.WriteLine("length: " + temp3.Length);
                             if (temp3.Length == 4) {
-                                MainClass.game.setCord(int.Parse(temp3[1]), int.Parse(temp3[2]));
-                                MainClass.game.setCurrentPiece(temp3[3]);
+                                Program.game.setCord(int.Parse(temp3[1]), int.Parse(temp3[2]));
+                                Program.game.setCurrentPiece(temp3[3]);
                             }
 
                         }

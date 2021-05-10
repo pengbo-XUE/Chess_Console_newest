@@ -23,21 +23,21 @@ namespace Chess2_redo
             if (this.check_move(newx, newy) == true)
             {   
                 //Console.WriteLine("in the if loop"+ newx+" "+newy);
-                MainClass.game.board.game_board[x, y] = null;
-                MainClass.game.board.game_board[newx, newy] = this;
+                Program.game.board.game_board[x, y] = null;
+                Program.game.board.game_board[newx, newy] = this;
 
                 this.x = newx;
                 this.y = newy;
 
                 Console.WriteLine("valid");
-                MainClass.pipe.sendData("p_move_valid");
-                MainClass.game.board.updateOneDAryAndList();
+                Program.pipe.sendData("p_move_valid");
+                Program.game.board.updateOneDAryAndList();
                 return true;
                 
 
             }
             Console.WriteLine("invalid");
-            MainClass.pipe.sendData("p_move_invalid");
+            Program.pipe.sendData("p_move_invalid");
             return false;
         }
         public virtual bool check_move(int i, int j) { return false; }

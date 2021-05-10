@@ -29,7 +29,7 @@ namespace Chess2_redo
         public override bool check_move(int newx, int newy)
         {   
             
-            temp_b = MainClass.game.board.game_board;
+            temp_b = Program.game.board.game_board;
             int v = Math.Abs(newy - this.y);
 
             if (newx == x && newy > y && direction == "up" && newy > this.y)
@@ -90,7 +90,7 @@ namespace Chess2_redo
         {
             if (temp_b[newx, newy] != null && temp_b[newx, newy].color != this.color)
             {
-                MainClass.game.deletePiece(temp_b[newx, newy].color, temp_b[newx, newy].Id);
+                Program.game.deletePiece(temp_b[newx, newy].color, temp_b[newx, newy].Id);
                 return true;
             }
             return false;

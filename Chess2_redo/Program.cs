@@ -10,10 +10,8 @@ namespace Chess2_redo
     //array[1] is the x cord
     //array[2] is the y cord
     //array [3] is the piece that is to be moved
-    class MainClass
+    class Program
     {       
-        
-       
         public static Game game;
         public static PipeServer pipe;
         public static bool gameOver { get; set; } = false;
@@ -40,8 +38,6 @@ namespace Chess2_redo
             }
 
         }
-        
-       
     }
 }
 
