@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Chess2_redo.Game;
 
 namespace Chess2_redo
 {
@@ -33,9 +34,7 @@ namespace Chess2_redo
                 {
                     for (int i = 1; i <= v; i++)
                     {
-                        //Console.WriteLine("in the check if loop " + newy);
-                       // Console.WriteLine("in the check if loop seacond " + temp_b[0,3]);
-                        //Console.WriteLine("in the check if loop third " + v);
+                       
                         if (temp_b[this.x, this.y + i] != null)
                         {   
                             //this if loop determines if the last place the piece lands on has a enemy on it
@@ -43,7 +42,7 @@ namespace Chess2_redo
                             if (this.x == newx && this.y + i == newy &&
                                 temp_b[this.x, this.y + i].color != this.color) 
                             {   
-                                MainClass.deletePiece(temp_b[this.x, this.y + i].Id);
+                                MainClass.game.deletePiece(temp_b[this.x, this.y + i].color, temp_b[this.x, this.y + i].Id);
                                 return true;
                             }
                             Console.WriteLine("two " + i);
@@ -65,7 +64,7 @@ namespace Chess2_redo
                             if (this.x == newx && this.y - i == newy &&
                                 temp_b[this.x, this.y - i].color != this.color)
                             {
-                                MainClass.deletePiece(temp_b[this.x, this.y - i].Id);
+                                MainClass.game.deletePiece(temp_b[this.x, this.y - i].color, temp_b[this.x, this.y - i].Id);
                                 return true;
                             }
                             //Console.WriteLine(i);
@@ -97,7 +96,7 @@ namespace Chess2_redo
                             if (this.x + i ==  newx && this.y== newy &&
                                 temp_b[this.x + i, this.y].color != this.color)
                             {
-                                MainClass.deletePiece(temp_b[this.x + i, this.y].Id);
+                                MainClass.game.deletePiece(temp_b[this.x + i, this.y].color, temp_b[this.x + i, this.y].Id);
                                 return true;
                             }
                             return false;
@@ -117,7 +116,7 @@ namespace Chess2_redo
                             if (this.x - i == newx && this.y == newy &&
                                 temp_b[this.x - i, this.y].color != this.color)
                             {
-                                MainClass.deletePiece(temp_b[this.x - i, this.y].Id);
+                                MainClass.game.deletePiece(temp_b[this.x - i, this.y].color, temp_b[this.x - i, this.y].Id);
                                 return true;
                             }
                             return false;

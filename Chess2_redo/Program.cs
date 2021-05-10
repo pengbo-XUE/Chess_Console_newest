@@ -26,21 +26,7 @@ namespace Chess2_redo
         {   
             //creates a new game
             game = new Game();
-
-
-
             game.board.updateOneDAryAndList();
-
-            
-
-           /* foreach (Piece p in game.board.game_board) {
-                Console.WriteLine(p.Id);
-            }
-            Console.ReadLine();
-            foreach (Piece p  in game.board.boardList) {
-                Console.WriteLine(p.Id);
-            }*/
-
             pipe = new PipeServer();
             while (!gameOver) {
 
@@ -57,7 +43,6 @@ namespace Chess2_redo
             }
 
         }
-
         // this method takes a string which is the piece id in a string format
         // then it selects the piece with the id from the boardList list in game class
         public static void setCurrentPiece(string p) 
@@ -77,15 +62,6 @@ namespace Chess2_redo
             cunrrentPiece = tempList[0];
         }
 
-        public static void deletePiece(string p)
-        {
-            var result = from Piece in game.board.boardList
-                         where Piece != null
-                         select Piece;
-            var result2 = result.Single(r => r.Id == p);
-            game.board.boardList.Remove(result2);
-        }
-
         //gets the position of a piece
         public static string getPiecePosition(Piece p)
         {
@@ -98,8 +74,6 @@ namespace Chess2_redo
             inputx = x;
             inputy = y;
         }
-
-
     }
 }
 
