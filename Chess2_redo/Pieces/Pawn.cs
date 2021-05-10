@@ -34,7 +34,7 @@ namespace Chess2_redo
 
             if (newx == x && newy > y && direction == "up" && newy > this.y)
             {
-                if (abs_v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x,y+1]== null)
+                if (abs_v == 2 && firstmove && temp_b[newx, newy] == null && temp_b[x,y+1]== null)
                 {
                     
                     firstmove = false;
@@ -42,6 +42,7 @@ namespace Chess2_redo
                 }
                 else if (abs_v == 1 && temp_b[newx, newy] == null) 
                 {
+                    if (firstmove) firstmove = false;
                     return true;
                 }
                 return false;

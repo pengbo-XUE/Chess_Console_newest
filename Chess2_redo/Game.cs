@@ -28,6 +28,7 @@ namespace Chess2_redo
 
         public Rook br1, br2, wr1, wr2;
         public Bishop bb1, bb2, wb1, wb2;
+        public Knight bk1, bk2, wk1, wk2;
         public Pawn bp1, bp2, bp3, bp4, bp5, bp6, bp7, bp8;
         public Pawn wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8;
         public Game()
@@ -46,11 +47,19 @@ namespace Chess2_redo
             wr1 = new Rook("wr1", 0, 7, "w");
             wr2 = new Rook("wr2", 7, 7, "w");
 
+            //KNIGHTS
+            bk1 = new Knight("bk1", 1, 0, "b");
+            bk2 = new Knight("bk2", 6, 0, "b");
+            wk1 = new Knight("wk1", 1, 7, "w");
+            wk2 = new Knight("wk2", 6, 7, "w");
+
             //BISHOPS
-            bb1 = new Bishop("bb1", 1, 0, "b");
-            bb2 = new Bishop("bb2", 6, 0, "b");
-            wb1 = new Bishop("wb1", 1, 7, "w");
-            wb2 = new Bishop("wb2", 6, 7, "w");
+            bb1 = new Bishop("bb1", 2, 0, "b");
+            bb2 = new Bishop("bb2", 5, 0, "b");
+            wb1 = new Bishop("wb1", 2, 7, "w");
+            wb2 = new Bishop("wb2", 5, 7, "w");
+
+            
 
             //BLACK PAWNS
             bp1 = new Pawn("bp1", 0, 1, "b");
@@ -85,6 +94,12 @@ namespace Chess2_redo
             whiteSide.onBoard.Add(this.wb1);
             whiteSide.onBoard.Add(this.wb2);
 
+            //KNIGHTS
+            blackSide.onBoard.Add(this.bk1);
+            blackSide.onBoard.Add(this.bk2);
+            whiteSide.onBoard.Add(this.wk1);
+            whiteSide.onBoard.Add(this.wk2);
+
             //BLACK PAWNS
             blackSide.onBoard.Add(this.bp1);
             blackSide.onBoard.Add(this.bp2);
@@ -113,11 +128,19 @@ namespace Chess2_redo
             this.board.game_board[0, 7] = this.wr1;
             this.board.game_board[7, 7] = this.wr2;
 
+            //KNIGHTS
+            this.board.game_board[1, 0] = this.bk1;
+            this.board.game_board[6, 0] = this.bk2;
+            this.board.game_board[1, 7] = this.wk1;
+            this.board.game_board[6, 7] = this.wk2;
+
             //BISHOPS
-            this.board.game_board[1, 0] = this.bb1;
-            this.board.game_board[6, 0] = this.bb2;
-            this.board.game_board[1, 7] = this.wb1;
-            this.board.game_board[6, 7] = this.wb2;
+            this.board.game_board[2, 0] = this.bb1;
+            this.board.game_board[5, 0] = this.bb2;
+            this.board.game_board[2, 7] = this.wb1;
+            this.board.game_board[5, 7] = this.wb2;
+
+            
 
             //BLACK PAWN
             this.board.game_board[0, 1] = this.bp1;

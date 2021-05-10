@@ -31,12 +31,12 @@ namespace Chess2_redo
 
         public List<Piece> BoardtoList(Piece[,] board)
         {
-            List<Piece> ary = new List<Piece>();
+            List<Piece> list = new List<Piece>();
             foreach (Piece i in board)
             {
-                ary.Add(i);
+                if(i!=null)list.Add(i);
             }
-            return ary;
+            return list;
         }
 
         //method for turning 2d ary into to a 1d array

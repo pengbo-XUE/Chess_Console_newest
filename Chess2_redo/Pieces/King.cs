@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chess2_redo.Pieces
+namespace Chess2_redo
 {
     class King : Piece
     {
