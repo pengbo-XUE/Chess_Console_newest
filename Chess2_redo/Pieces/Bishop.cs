@@ -19,10 +19,85 @@ namespace Chess2_redo
             int abs_v_y = Math.Abs(newy - this.y);
             int abs_v_x = Math.Abs(newx - this.x);
 
-            if (newx > x && newy > x) { }
-            else if (newx > x && newy < y) { }
-            else if (newx < x && newy > y) { }
-            else if (newx < x && newy < y) { }
+            //moving NE
+            if (newx > x && newy > y) 
+            {
+                for (int i = 1; i <= abs_v_x; i++) 
+                {
+                    if (temp_b[x + i, y + i] != null) 
+                    {
+                        if (this.x + i == newx && this.y + i == newy &&
+                               temp_b[this.x+i, this.y + i].color != this.color)
+                        {
+                            Program.game.deletePiece(temp_b[this.x+i, this.y + i].color, temp_b[this.x+i, this.y + i].Id);
+                            return true;
+                        }
+                        return false;
+                    }
+                    
+                }
+                return true;
+            }
+
+            //moving SE
+            else if (newx > x && newy < y) 
+            {
+                for (int i = 1; i <= abs_v_x; i++)
+                {
+                    if (temp_b[x + i, y - i] != null)
+                    {
+                        if (this.x + i == newx && this.y - i == newy &&
+                               temp_b[this.x +i, this.y - i].color != this.color)
+                        {
+                            Program.game.deletePiece(temp_b[this.x + i, this.y - i].color, temp_b[this.x + i, this.y - i].Id);
+                            return true;
+                        }
+                        return false;
+                    }
+
+                }
+                return true;
+            }
+
+            //moving NW
+            else if (newx < x && newy > y) 
+            {
+                for (int i = 1; i <= abs_v_x; i++)
+                {
+                    if (temp_b[x - i, y + i] != null)
+                    {
+                        if (this.x - i == newx && this.y + i == newy &&
+                               temp_b[this.x - i, this.y + i].color != this.color)
+                        {
+                            Program.game.deletePiece(temp_b[this.x - i, this.y + i].color, temp_b[this.x - i, this.y + i].Id);
+                            return true;
+                        }
+                        return false;
+                    }
+
+                }
+                return true;
+            }
+
+            //moving SW
+            else if (newx < x && newy < y) 
+            {
+                for (int i = 1; i <= abs_v_x; i++)
+                {
+                    if (temp_b[x - i, y - i] != null)
+                    {
+                        if (this.x - i == newx && this.y - i == newy &&
+                               temp_b[this.x - i, this.y - i].color != this.color)
+                        {
+                            Program.game.deletePiece(temp_b[this.x - i, this.y - i].color, temp_b[this.x - i, this.y - i].Id);
+                            return true;
+                        }
+                        return false;
+                    }
+
+                }
+                return true;
+            }
             else if (newx == x && newy == y) return false;
             return false;
 

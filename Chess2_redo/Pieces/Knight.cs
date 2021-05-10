@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Chess2_redo.Pieces
 {
-    class Knight
+    class Knight : Piece
     {
     }
 }

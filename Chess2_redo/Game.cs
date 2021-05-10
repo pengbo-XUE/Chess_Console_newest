@@ -27,6 +27,7 @@ namespace Chess2_redo
         public Player blackSide;
 
         public Rook br1, br2, wr1, wr2;
+        public Bishop bb1, bb2, wb1, wb2;
         public Pawn bp1, bp2, bp3, bp4, bp5, bp6, bp7, bp8;
         public Pawn wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8;
         public Game()
@@ -43,7 +44,13 @@ namespace Chess2_redo
             br1 = new Rook("br1", 0, 0,"b");
             br2 = new Rook("br2", 7, 0,"b");
             wr1 = new Rook("wr1", 0, 7, "w");
-            wr2 = new Rook("wr1", 7, 7, "w");
+            wr2 = new Rook("wr2", 7, 7, "w");
+
+            //BISHOPS
+            bb1 = new Bishop("bb1", 1, 0, "b");
+            bb2 = new Bishop("bb2", 6, 0, "b");
+            wb1 = new Bishop("wb1", 1, 7, "w");
+            wb2 = new Bishop("wb2", 6, 7, "w");
 
             //BLACK PAWNS
             bp1 = new Pawn("bp1", 0, 1, "b");
@@ -72,6 +79,12 @@ namespace Chess2_redo
             whiteSide.onBoard.Add(this.wr1);
             whiteSide.onBoard.Add(this.wr2);
 
+            //BISHOPS
+            blackSide.onBoard.Add(this.bb1);
+            blackSide.onBoard.Add(this.bb2);
+            whiteSide.onBoard.Add(this.wb1);
+            whiteSide.onBoard.Add(this.wb2);
+
             //BLACK PAWNS
             blackSide.onBoard.Add(this.bp1);
             blackSide.onBoard.Add(this.bp2);
@@ -99,6 +112,12 @@ namespace Chess2_redo
             this.board.game_board[7, 0] = this.br2;
             this.board.game_board[0, 7] = this.wr1;
             this.board.game_board[7, 7] = this.wr2;
+
+            //BISHOPS
+            this.board.game_board[1, 0] = this.bb1;
+            this.board.game_board[6, 0] = this.bb2;
+            this.board.game_board[1, 7] = this.wb1;
+            this.board.game_board[6, 7] = this.wb2;
 
             //BLACK PAWN
             this.board.game_board[0, 1] = this.bp1;
