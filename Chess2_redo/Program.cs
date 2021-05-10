@@ -18,7 +18,7 @@ namespace Chess2_redo
         public static int inputx;
         public static int inputy;
         public static Game game;
-
+        public static PipeServer pipe;
         public static bool gameOver { get; set; } = false;
 
 
@@ -41,7 +41,7 @@ namespace Chess2_redo
                 Console.WriteLine(p.Id);
             }*/
 
-            PipeServer pipe = new PipeServer();
+            pipe = new PipeServer();
             while (!gameOver) {
 
                 pipe.reciveData();
@@ -49,7 +49,6 @@ namespace Chess2_redo
                 {   
                     SwitchBoard.handelRequest(userInput);
                     userInput = null;
-                    pipe.sendData("Hello");
                 }
                 //await pipe.reciveData();
                 game.board.updateOneDAryAndList();
@@ -78,7 +77,14 @@ namespace Chess2_redo
             cunrrentPiece = tempList[0];
         }
 
-        
+        public static void deletePiece(string p)
+        {
+            var result = from Piece in game.board.boardList
+                         where Piece != null
+                         select Piece;
+            var result2 = result.Single(r => r.Id == p);
+            game.board.boardList.Remove(result2);
+        }
 
         //gets the position of a piece
         public static string getPiecePosition(Piece p)

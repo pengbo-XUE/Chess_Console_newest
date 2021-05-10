@@ -17,12 +17,14 @@ namespace Chess2_redo
                     if (CheckWin.check())
                     {
                         MainClass.gameOver = true;
+                        MainClass.pipe.sendData("game_over");
                     }
-                    Console.WriteLine("Piece moved");
+                    //Console.WriteLine("Piece moved");
                     break;
                 case "reset":
-                    //MainClass.game = new Game();
+                    MainClass.game = new Game();
                     Console.WriteLine("Board reset");
+                    MainClass.pipe.sendData("game_reset");
                     break;
             }
         }

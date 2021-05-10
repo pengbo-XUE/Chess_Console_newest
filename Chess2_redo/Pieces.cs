@@ -15,7 +15,7 @@ namespace Chess2_redo
         public string Id { get; set; }
         public int x { get; set; }
         public int y { get; set; }
-       
+        public string color { get; set; }
 
         public virtual bool move(int newx, int newy) 
         {
@@ -30,10 +30,12 @@ namespace Chess2_redo
                 this.y = newy;
 
                 Console.WriteLine("valid");
+                MainClass.pipe.sendData("p_move_valid");
                 return true;
 
             }
             Console.WriteLine("invalid");
+            MainClass.pipe.sendData("p_move_invalid");
             return false;
         }
         public virtual bool check_move(int i, int j) { return false; }

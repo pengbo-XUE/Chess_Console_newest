@@ -8,7 +8,7 @@ namespace Chess2_redo
     {
         public string color { get; set; }
         public List<Piece> onBoard { get; set; }
-        public Player(string? side)
+        public Player(string side)
         {   
             onBoard = new List<Piece>();
             color = side;

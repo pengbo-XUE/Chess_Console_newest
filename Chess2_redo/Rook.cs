@@ -9,11 +9,12 @@ namespace Chess2_redo
     class Rook : Piece
     {
         
-        public Rook(string newName, int one, int two)
+        public Rook(string newName, int one, int two, string clr)
         {
             this.Id = newName;
             this.x = one;
             this.y = two;
+            this.color = clr;
         }
         public override bool check_move(int newx, int newy)
         {
@@ -37,7 +38,15 @@ namespace Chess2_redo
                         //Console.WriteLine("in the check if loop third " + v);
                         if (temp_b[this.x, this.y + i] != null)
                         {   
-                            //Console.WriteLine("two " + i);
+                            //this if loop determines if the last place the piece lands on has a enemy on it
+                            //delets the enemy piece and replaces it in the position
+                            if (this.x == newx && this.y + i == newy &&
+                                temp_b[this.x, this.y + i].color != this.color) 
+                            {   
+                                MainClass.deletePiece(temp_b[this.x, this.y + i].Id);
+                                return true;
+                            }
+                            Console.WriteLine("two " + i);
                             return false;
                         }
                        
@@ -51,6 +60,14 @@ namespace Chess2_redo
                     {
                         if (temp_b[this.x, this.y - i] != null)
                         {
+                            //this if loop determines if the last place the piece lands on has a enemy on it
+                            //delets the enemy piece and replaces it in the position
+                            if (this.x == newx && this.y - i == newy &&
+                                temp_b[this.x, this.y - i].color != this.color)
+                            {
+                                MainClass.deletePiece(temp_b[this.x, this.y - i].Id);
+                                return true;
+                            }
                             //Console.WriteLine(i);
                             return false;
                         }
@@ -75,6 +92,14 @@ namespace Chess2_redo
                     {
                         if (temp_b[this.x + i, this.y] != null)
                         {
+                            //this if loop determines if the last place the piece lands on has a enemy on it
+                            //delets the enemy piece and replaces it in the position
+                            if (this.x + i ==  newx && this.y== newy &&
+                                temp_b[this.x + i, this.y].color != this.color)
+                            {
+                                MainClass.deletePiece(temp_b[this.x + i, this.y].Id);
+                                return true;
+                            }
                             return false;
                         }
                     }
@@ -87,6 +112,14 @@ namespace Chess2_redo
                     {
                         if (temp_b[this.x - i, this.y] != null)
                         {
+                            //this if loop determines if the last place the piece lands on has a enemy on it
+                            //delets the enemy piece and replaces it in the position
+                            if (this.x - i == newx && this.y == newy &&
+                                temp_b[this.x - i, this.y].color != this.color)
+                            {
+                                MainClass.deletePiece(temp_b[this.x - i, this.y].Id);
+                                return true;
+                            }
                             return false;
                         }
                     }

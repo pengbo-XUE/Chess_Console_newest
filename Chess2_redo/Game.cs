@@ -16,6 +16,7 @@ namespace Chess2_redo
         public Board board { get; set; }
         public Rook br1;
         public Rook br2;
+        public Rook wr1;
         public Game()
         {
             //players declared
@@ -26,8 +27,9 @@ namespace Chess2_redo
             board = new Board();
 
             //hard coded declearing pieces
-            br1 = new Rook("br1", 0, 0);
-            br2 = new Rook("br2", 0, 0);
+            br1 = new Rook("br1", 0, 0,"b");
+            br2 = new Rook("br2", 0, 1,"b");
+            wr1 = new Rook("wr1", 2, 0, "w");
             //board.updateOneDAryAndList();
 
             //hard coded adding piece to player list
@@ -35,7 +37,8 @@ namespace Chess2_redo
 
             //hard code pos assignment DELETE LATER
             this.board.game_board[0, 0] = this.br1;
-            this.board.game_board[0, 3] = this.br2;
+            this.board.game_board[0, 1] = this.br2;
+            this.board.game_board[2, 0] = this.wr1;
             //int[] ary = board.game_board[0];
             board.updateOneDAryAndList();
         }
