@@ -14,8 +14,7 @@ namespace Chess2_redo
             this.y = two;
             this.color = clr;
         }
-        //THIS IS NOT WORKING
-        public override bool check_move(int newx, int newy)
+        public override bool checkMove(int newx, int newy)
         {
             temp_b = Program.game.board.game_board;
             int abs_v_y = Math.Abs(newy - this.y);

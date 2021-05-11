@@ -26,7 +26,7 @@ namespace Chess2_redo
                 this.direction = "down";
             }
         }
-        public override bool check_move(int newx, int newy)
+        public override bool checkMove(int newx, int newy)
         {   
             
             temp_b = Program.game.board.game_board;

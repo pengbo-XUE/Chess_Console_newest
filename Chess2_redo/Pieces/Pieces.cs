@@ -20,7 +20,7 @@ namespace Chess2_redo
         public virtual bool move(int newx, int newy) 
         {
             //Console.WriteLine("before the if loop" + newx + " " + newy);
-            if (this.check_move(newx, newy) == true)
+            if (this.checkMove(newx, newy) == true)
             {   
                 //Console.WriteLine("in the if loop"+ newx+" "+newy);
                 Program.game.board.game_board[x, y] = null;
@@ -40,7 +40,7 @@ namespace Chess2_redo
             Program.pipe.sendData("p_move_invalid");
             return false;
         }
-        public virtual bool check_move(int i, int j) { return false; }
+        public virtual bool checkMove(int i, int j) { return false; }
         
         
     }

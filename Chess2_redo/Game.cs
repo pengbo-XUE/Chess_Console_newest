@@ -11,7 +11,7 @@ namespace Chess2_redo
     class Game
     {
         public int GameId { get; set; }
-        //public List<Player> players { get; set; }
+        public List<Player> players { get; set; }
 
 
         //MICS stuff
@@ -21,11 +21,13 @@ namespace Chess2_redo
         public Piece cunrrentPiece;
         public int inputx;
         public int inputy;
+        
 
         //players declared
         public Player whiteSide;
         public Player blackSide;
 
+        public King bkk, wkk;
         public Rook br1, br2, wr1, wr2;
         public Bishop bb1, bb2, wb1, wb2;
         public Knight bk1, bk2, wk1, wk2;
@@ -34,12 +36,21 @@ namespace Chess2_redo
         public Game()
         {
             //players declared
+            Console.WriteLine("waaaaaaaaaaaheyyyyyyyyyy   ");
             blackSide = new Player("black");
             whiteSide = new Player("white");
+
+            players = new List<Player>();
+            players.Add(blackSide);
+            players.Add(whiteSide);
+
             //board declared
             board = new Board();
 
             //pieces declared
+            //KINGS
+            bkk = new King("bkk", 3, 0, "b");
+            wkk = new King("wkk", 3, 7, "w");
 
             //ROOKS
             br1 = new Rook("br1", 0, 0,"b");
@@ -82,6 +93,12 @@ namespace Chess2_redo
             wp8 = new Pawn("wp8", 7, 6, "w");
 
             //adding piece to player list
+            //KINGS
+            blackSide.onBoard.Add(this.bkk);
+
+            //white king and black king creat
+            whiteSide.onBoard.Add(this.wkk);
+
             //ROOKS
             blackSide.onBoard.Add(this.br1);
             blackSide.onBoard.Add(this.br2);
@@ -119,9 +136,13 @@ namespace Chess2_redo
             whiteSide.onBoard.Add(this.wp6);
             whiteSide.onBoard.Add(this.wp7);
             whiteSide.onBoard.Add(this.wp8);
-           
+
 
             //pos assignment
+            //KINGS
+            this.board.game_board[3, 0] = this.bkk;
+            this.board.game_board[3, 7] = this.wkk;
+
             //ROOKS
             this.board.game_board[0, 0] = this.br1;
             this.board.game_board[7, 0] = this.br2;
@@ -160,8 +181,9 @@ namespace Chess2_redo
             this.board.game_board[5, 6] = this.wp6;
             this.board.game_board[6, 6] = this.wp7;
             this.board.game_board[7, 6] = this.wp8;
-
+            
             board.updateOneDAryAndList();
+           
         }
         //these two methods deletes the given piece from a list/lists
         public void deletePiece(string p)

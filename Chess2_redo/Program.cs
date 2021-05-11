@@ -19,10 +19,14 @@ namespace Chess2_redo
 
         public static void Main(string[] args)
         {   
+
             //creates a new game
+            Console.WriteLine("the cunrrent piece is: ");
             game = new Game();
             game.board.updateOneDAryAndList();
             pipe = new PipeServer();
+            
+            //game.bkk.updateKingList();
             while (!gameOver) {
 
                 pipe.reciveData();
@@ -33,7 +37,8 @@ namespace Chess2_redo
                 }
                 //await pipe.reciveData();
                 game.board.updateOneDAryAndList();
-
+                game.wkk.updateKingList();
+                game.bkk.updateKingList();
                 //Console.WriteLine("the cunrrent piece is: " + cunrrentPiece);
             }
 
