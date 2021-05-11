@@ -1,0 +1,3 @@
+﻿1. finish implementing the term system.
+2.finish queen
+3.fix the pawn
