@@ -44,8 +44,9 @@ namespace Chess2_redo
 
         public static bool checkCheckMate(Player p,King king) 
         {
-            cheackCheck(p);
-            if (p.check && king.avaliableMoves == null) 
+            Program.game.bkk.updateKingList();
+            Program.game.wkk.updateKingList();
+            if (cheackCheck(p) && king.avaliableMoves == null) 
             {
                 return true;
             }

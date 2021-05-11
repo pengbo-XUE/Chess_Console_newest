@@ -12,7 +12,6 @@ namespace Chess2_redo
             switch (request)
             {
                 case "move":
-                    Console.WriteLine("From switch board"+Program.game.cunrrentPiece);
                     Program.game.cunrrentPiece.move(Program.game.inputx, Program.game.inputy);
                     if (CheckWin.check())
                     {
