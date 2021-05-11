@@ -29,7 +29,7 @@ namespace Chess2_redo
                         if (this.x + i == newx && this.y + i == newy &&
                                temp_b[this.x+i, this.y + i].color != this.color)
                         {
-                            Program.game.deletePiece(temp_b[this.x+i, this.y + i].color, temp_b[this.x+i, this.y + i].Id);
+                            
                             return true;
                         }
                         return false;
@@ -49,7 +49,7 @@ namespace Chess2_redo
                         if (this.x + i == newx && this.y - i == newy &&
                                temp_b[this.x +i, this.y - i].color != this.color)
                         {
-                            Program.game.deletePiece(temp_b[this.x + i, this.y - i].color, temp_b[this.x + i, this.y - i].Id);
+                            
                             return true;
                         }
                         return false;
@@ -69,7 +69,6 @@ namespace Chess2_redo
                         if (this.x - i == newx && this.y + i == newy &&
                                temp_b[this.x - i, this.y + i].color != this.color)
                         {
-                            Program.game.deletePiece(temp_b[this.x - i, this.y + i].color, temp_b[this.x - i, this.y + i].Id);
                             return true;
                         }
                         return false;
@@ -89,7 +88,6 @@ namespace Chess2_redo
                         if (this.x - i == newx && this.y - i == newy &&
                                temp_b[this.x - i, this.y - i].color != this.color)
                         {
-                            Program.game.deletePiece(temp_b[this.x - i, this.y - i].color, temp_b[this.x - i, this.y - i].Id);
                             return true;
                         }
                         return false;

@@ -16,5 +16,12 @@ namespace Chess2_redo
             onBoard = new List<Piece>();
             color = side;
         }
+
+        public King getKing()
+        {
+            if (this.color == "b") return Program.game.bkk;
+            else if (this.color == "w") return Program.game.wkk;
+            return null;
+        }
     }
 }

@@ -27,8 +27,8 @@ namespace Chess2_redo
             }
         }
         public override bool checkMove(int newx, int newy)
-        {   
-            
+        {
+            Console.WriteLine("first move?   " + this.Id+"  "+this.firstmove);
             temp_b = Program.game.board.game_board;
             int abs_v = Math.Abs(newy - this.y);
 
@@ -36,7 +36,6 @@ namespace Chess2_redo
             {
                 if (abs_v == 2 && firstmove && temp_b[newx, newy] == null && temp_b[x,y+1]== null)
                 {
-                    
                     firstmove = false;
                     return true;
                 }
@@ -49,13 +48,16 @@ namespace Chess2_redo
             }
             else if (newx == x && newy < y && direction == "down" && newy < this.y)
             {
-                if (abs_v == 2 && firstmove == true && temp_b[newx, newy] == null && temp_b[x, y - 1] == null)
+                if (abs_v == 2 && firstmove && temp_b[newx, newy] == null && temp_b[x, y - 1] == null)
                 {
+                    Console.WriteLine("we are HHHHHHHHHEre");
+                    //works until here   that i know of
                     firstmove = false;
                     return true;
                 }
                 else if (abs_v == 1 && temp_b[newx, newy] == null)
                 {
+                    if (firstmove) firstmove = false;
                     return true;
                 }
                 return false;
@@ -91,10 +93,13 @@ namespace Chess2_redo
         {
             if (temp_b[newx, newy] != null && temp_b[newx, newy].color != this.color)
             {
-                Program.game.deletePiece(temp_b[newx, newy].color, temp_b[newx, newy].Id);
                 return true;
             }
             return false;
         }
     }
 }
+
+//this has many issues IE pawns firstmove will be falsed if checkMove of King returns ture for moving 2space
+
+//!!! remember that pawn cant move two space after first move is caping

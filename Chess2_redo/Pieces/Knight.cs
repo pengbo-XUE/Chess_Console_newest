@@ -26,7 +26,6 @@ namespace Chess2_redo
                 {
                     if (temp_b[newx, newy].color != this.color)
                     {
-                        Program.game.deletePiece(temp_b[newx, newy].color, temp_b[newx,newy].Id);
                         return true;
                     }
                     return false;

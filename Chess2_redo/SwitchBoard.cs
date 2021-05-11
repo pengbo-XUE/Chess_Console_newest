@@ -12,13 +12,25 @@ namespace Chess2_redo
             switch (request)
             {
                 case "move":
+                    //taking out the delete piece method from checkMove so that the king can use it
+                    if (Program.game.board.game_board[Program.game.inputx, Program.game.inputy] != null
+                        && Program.game.cunrrentPiece.checkMove(Program.game.inputx, Program.game.inputy) ) 
+                    {
+                        Console.WriteLine("please dont come here");
+                        Program.game.deletePiece(Program.game.board.game_board[Program.game.inputx, Program.game.inputy].color,
+                        Program.game.board.game_board[Program.game.inputx, Program.game.inputy].Id);
+                        
+                    }
+
                     Program.game.cunrrentPiece.move(Program.game.inputx, Program.game.inputy);
-                    if (CheckWin.check())
+
+                    if (CheckMate.checkCheckMate(Program.game.cunrrentPlayer, Program.game.cunrrentPlayer.getKing()))
                     {
                         Program.gameOver = true;
                         Program.pipe.sendData("game_over");
                     }
-                    //Console.WriteLine("Piece moved");
+                    Program.game.setCurrentPlayer();
+
                     break;
                 case "reset":
                     Program.game = new Game();

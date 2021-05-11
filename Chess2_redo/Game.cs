@@ -19,6 +19,8 @@ namespace Chess2_redo
         public Board board { get; set; }
         public string userInput;
         public Piece cunrrentPiece;
+        public Player cunrrentPlayer;
+        public Player previousPlayer;
         public int inputx;
         public int inputy;
         
@@ -36,9 +38,8 @@ namespace Chess2_redo
         public Game()
         {
             //players declared
-            Console.WriteLine("waaaaaaaaaaaheyyyyyyyyyy   ");
-            blackSide = new Player("black");
-            whiteSide = new Player("white");
+            blackSide = new Player("b");
+            whiteSide = new Player("w");
 
             players = new List<Player>();
             players.Add(blackSide);
@@ -239,6 +240,25 @@ namespace Chess2_redo
                 tempList.Add(i);
             }
             cunrrentPiece = tempList[0];
+        }
+
+        //sets the current player
+        public void setCurrentPlayer()
+        {
+            if (cunrrentPiece.color == "b")
+            {
+                cunrrentPlayer = players.Single(r => r.color == "b");
+            }
+            else if(cunrrentPiece.color == "w")
+            {
+                cunrrentPlayer = players.Single(r => r.color == "w");
+            }
+        }
+
+        public void setPreviousPlayer()
+        {
+            this.previousPlayer = this.cunrrentPlayer;
+            this.cunrrentPlayer = null;
         }
 
         //gets the position of a piece

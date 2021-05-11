@@ -79,7 +79,8 @@ namespace Chess2_redo
                             }
                         }
                     }
-                    //Console.WriteLine("this is the board :     " + Program.game.board.game_board[ary[0], ary[1]].Id);
+                    //if the piece next to the king is a enmey piece but cap but caping it would result in a check
+                    //the move should not be allowed
                     if ((valid&& Program.game.board.game_board[ary[0], ary[1]] == null) 
                         || (valid && Program.game.board.game_board[ary[0], ary[1]].color != this.color)) 
                         avaliableMoves.Add(ary);
@@ -92,5 +93,3 @@ namespace Chess2_redo
 
 //why is update king list not working in the constructor??
 //why cant i update king list in the game constructor??
-
-// IMPORTANT: TIM!!! THE SPACE != NULL IS NOT IMPLEMENTED!!!!!!

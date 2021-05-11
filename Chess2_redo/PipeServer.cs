@@ -74,11 +74,9 @@ namespace Chess2_redo
                             if (temp3.Length == 4) {
                                 Program.game.setCord(int.Parse(temp3[1]), int.Parse(temp3[2]));
                                 Program.game.setCurrentPiece(temp3[3]);
+                                Program.game.setCurrentPlayer();
                             }
-
-                        }
-
-                        
+                        }      
                     }
                     pipeClient.Dispose();
 

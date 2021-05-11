@@ -17,7 +17,6 @@ namespace Chess2_redo
         public Piece[] boardJson = new Piece[64];
         public List<Piece> boardList { get; set; }
         public string boardJsonString;
-        //inits the boardJson
         public Board()
         {
             updateOneDAryAndList();

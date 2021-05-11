@@ -21,7 +21,7 @@ namespace Chess2_redo
         {   
 
             //creates a new game
-            Console.WriteLine("the cunrrent piece is: ");
+            //Console.WriteLine("the cunrrent piece is: ");
             game = new Game();
             game.board.updateOneDAryAndList();
             pipe = new PipeServer();
@@ -39,7 +39,7 @@ namespace Chess2_redo
                 game.board.updateOneDAryAndList();
                 game.wkk.updateKingList();
                 game.bkk.updateKingList();
-                //Console.WriteLine("the cunrrent piece is: " + cunrrentPiece);
+                Console.WriteLine("br1?????" + game.blackSide.onBoard[1].x+" "+ game.blackSide.onBoard[1].y);
             }
 
         }
