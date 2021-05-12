@@ -275,6 +275,10 @@ namespace Chess2_redo
         }
     }
 
+
+
+
+
     class BoardDbContext : DbContext
     {
         public DbSet<Game> Games { get; set; }

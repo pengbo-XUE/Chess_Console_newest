@@ -12,6 +12,7 @@ namespace Chess2_redo
    
         public void sendData(string result)
         {
+            Console.WriteLine("in the method!!!!!!!!!!!:   "+result);
             using (NamedPipeServerStream pipeServer =
             new NamedPipeServerStream("chess-pipe-1", PipeDirection.InOut))
             {
@@ -24,6 +25,7 @@ namespace Chess2_redo
                 {
                     using (StreamWriter sw = new StreamWriter(pipeServer))
                     {
+                        Console.WriteLine("in the using !!!!!!!:   " + result);
                         sw.AutoFlush = true;
                         sw.WriteLine(result);
 

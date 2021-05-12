@@ -28,7 +28,7 @@ namespace Chess2_redo
         }
         public override bool checkMove(int newx, int newy)
         {
-            Console.WriteLine("first move?   " + this.Id+"  "+this.firstmove);
+            
             temp_b = Program.game.board.game_board;
             int abs_v = Math.Abs(newy - this.y);
 
@@ -50,8 +50,6 @@ namespace Chess2_redo
             {
                 if (abs_v == 2 && firstmove && temp_b[newx, newy] == null && temp_b[x, y - 1] == null)
                 {
-                    Console.WriteLine("we are HHHHHHHHHEre");
-                    //works until here   that i know of
                     firstmove = false;
                     return true;
                 }
