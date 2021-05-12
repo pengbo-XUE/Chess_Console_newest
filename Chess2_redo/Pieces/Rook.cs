@@ -113,10 +113,8 @@ namespace Chess2_redo
                 }
             }
             // if the new pos is the same as the original move is invalid
-            else if (newy == this.y && newx == this.x)
-            {
-                return false;
-            }
+            else if (newy == this.y && newx == this.x) return false;
+            
 
             return false;
         }

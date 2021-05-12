@@ -30,6 +30,7 @@ namespace Chess2_redo
         public Player blackSide;
 
         public King bkk, wkk;
+        public Queen bq, wq;
         public Rook br1, br2, wr1, wr2;
         public Bishop bb1, bb2, wb1, wb2;
         public Knight bk1, bk2, wk1, wk2;
@@ -52,6 +53,10 @@ namespace Chess2_redo
             //KINGS
             bkk = new King("bkk", 3, 0, "b");
             wkk = new King("wkk", 3, 7, "w");
+
+            //QUEENS
+            bq = new Queen("bq", 4, 0, "b");
+            wq = new Queen("wq", 4, 7, "w");
 
             //ROOKS
             br1 = new Rook("br1", 0, 0,"b");
@@ -96,9 +101,11 @@ namespace Chess2_redo
             //adding piece to player list
             //KINGS
             blackSide.onBoard.Add(this.bkk);
-
-            //white king and black king creat
             whiteSide.onBoard.Add(this.wkk);
+
+            //QUEEN
+            blackSide.onBoard.Add(this.bq);
+            whiteSide.onBoard.Add(this.wq);
 
             //ROOKS
             blackSide.onBoard.Add(this.br1);
@@ -143,6 +150,11 @@ namespace Chess2_redo
             //KINGS
             this.board.game_board[3, 0] = this.bkk;
             this.board.game_board[3, 7] = this.wkk;
+
+            //QUEEN
+            this.board.game_board[4, 0] = this.bq;
+            this.board.game_board[4, 7] = this.wq;
+
 
             //ROOKS
             this.board.game_board[0, 0] = this.br1;
@@ -195,7 +207,7 @@ namespace Chess2_redo
             var result2 = result.Single(r => r.Id == p);
             board.boardList.Remove(result2);
         }
-       
+        // when overloaded this method deletes from both player list and game board
         public void deletePiece(string player, string p)
         {
             if (player == "b")
