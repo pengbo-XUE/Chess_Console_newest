@@ -364,7 +364,6 @@ D:\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.
 D:\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Chess2_redo\Chess2_redo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.csprojAssemblyReference.cache
 D:\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.AssemblyInfoInputs.cache
 D:\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.AssemblyInfo.cs
 D:\Chess2_redo\Chess2_redo\obj\Debug\netcoreapp3.1\Chess2_redo.csproj.CoreCompileInputs.cache

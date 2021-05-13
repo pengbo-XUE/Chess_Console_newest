@@ -74,7 +74,7 @@ namespace Chess2_redo
             bb1 = new Bishop("bb1", 2, 0, "b");
             bb2 = new Bishop("bb2", 5, 0, "b");
             wb1 = new Bishop("wb1", 2, 7, "w");
-            wb2 = new Bishop("wb2", 5, 7, "w");
+            wb2 = new Bishop("wb2", 1, 3, "w");
 
             
 

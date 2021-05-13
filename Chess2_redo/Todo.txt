@@ -1,3 +1,4 @@
-﻿1. finish implementing the term system.
-2.finish queen
-3.fix the pawn
+﻿1. finish implementing the term system.//impelemented,
+2.finish queen//impelemented
+3.fix the pawn check move will change the firstMove status
+4.need to work on how to cancel check, for example: other piece blocking the check, caping the checking piece;

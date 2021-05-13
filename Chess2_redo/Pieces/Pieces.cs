@@ -16,16 +16,21 @@ namespace Chess2_redo
         public int x { get; set; }
         public int y { get; set; }
         public string color { get; set; }
+        //reverse
+        public int? previousX;
+        public int? previousY;
 
         public virtual bool move(int newx, int newy) 
         {
             
-            if (this.checkMove(newx, newy) == true)
+            if (this.checkMove(newx, newy))
             {   
                 //Console.WriteLine("in the if loop"+ newx+" "+newy);
                 Program.game.board.game_board[x, y] = null;
                 Program.game.board.game_board[newx, newy] = this;
 
+                this.previousX = x;
+                this.previousY = y;
                 this.x = newx;
                 this.y = newy;
 
