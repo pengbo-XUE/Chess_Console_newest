@@ -24,7 +24,7 @@ namespace Chess2_redo
                     if (Program.game.board.game_board[Program.game.inputx, Program.game.inputy] != null
                         && Program.game.cunrrentPiece.checkMove(Program.game.inputx, Program.game.inputy) ) 
                     {
-                        Program.appendReturn("delete,"+ Program.game.board.game_board[Program.game.inputx, Program.game.inputy].Id);
+                        //Program.appendReturn("delete,"+ Program.game.board.game_board[Program.game.inputx, Program.game.inputy].Id);
                         Program.game.deletePiece(Program.game.board.game_board[Program.game.inputx, Program.game.inputy].color,
                         Program.game.board.game_board[Program.game.inputx, Program.game.inputy].Id);
                         

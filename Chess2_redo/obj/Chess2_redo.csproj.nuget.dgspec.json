@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {}
+    "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {}
   },
   "projects": {
-    "D:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {
+    "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+        "projectUniqueName": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
         "projectName": "Chess2_redo",
-        "projectPath": "D:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
-        "packagesPath": "C:\\Users\\Pengbo Xue\\.nuget\\packages\\",
-        "outputPath": "D:\\Chess2_redo\\Chess2_redo\\obj\\",
+        "projectPath": "E:\\Chess2_redo\\Chess2_redo\\Chess2_redo.csproj",
+        "packagesPath": "C:\\Users\\Pengb\\.nuget\\packages\\",
+        "outputPath": "E:\\Chess2_redo\\Chess2_redo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pengbo Xue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pengb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

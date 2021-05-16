@@ -238,20 +238,28 @@ namespace Chess2_redo
         // then it selects the piece with the id from the boardList list in game class
         public void setCurrentPiece(string p)
         {
-            var result = from Piece in board.boardList
-                         where Piece != null
-                         select Piece;
-
-            var result2 = from Piece in result
-                          where Piece.Id == p
-                          select Piece;
-            List<Piece> tempList = new List<Piece>();
-
-            foreach (Piece i in result2)
+            try
             {
-                tempList.Add(i);
+                var result = from Piece in board.boardList
+                             where Piece != null
+                             select Piece;
+
+                var result2 = from Piece in result
+                              where Piece.Id == p
+                              select Piece;
+                List<Piece> tempList = new List<Piece>();
+
+                foreach (Piece i in result2)
+                {
+                    tempList.Add(i);
+                }
+                cunrrentPiece = tempList[0];
             }
-            cunrrentPiece = tempList[0];
+            catch (Exception ex) 
+            {
+                Program.pipe.reciveData();
+            }
+           
         }
 
         //sets the current player
